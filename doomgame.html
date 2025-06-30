@@ -1841,6 +1841,8 @@
                 }); 
 
                 // Level completion check for regular levels (non-boss, non-mini-boss)
+                /* // MODIFIED BY JULES: This logic is removed to prevent level completion just by killing all enemies.
+                   // Level completion should only happen when the player reaches the TILE_EXIT.
                 if (!isBossLevel && !isCurrentLevelMiniBoss && enemiesRemaining <= 0 && enemiesSpawnedThisLevel >= enemiesToSpawnPerLevel) {
                     if (!isLevelCompleting) { 
                          let exitTileExists = false;
@@ -1856,6 +1858,7 @@
                          else console.log("All regular enemies cleared, but no exit tile found on map.");
                     }
                 }
+                */
             } catch (e) {
                 console.error("Error in update function:", e, e.stack);
                 gameRunning = false; 
